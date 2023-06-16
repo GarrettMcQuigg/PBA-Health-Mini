@@ -1,5 +1,7 @@
 # Local Server Setup
 
+Back-end written in Node.js/Express
+
 1. Change directories so that you're inside the server directory.
 ```bash
 cd pba-health-server
