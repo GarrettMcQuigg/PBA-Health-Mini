@@ -1,0 +1,67 @@
+<div class="register-container">
+  <div class="content" (keyup.enter)="register()">
+    <img
+      class="pba-logo"
+      src="../../../../assets/pba-health-logo.png"
+      alt="PBA Logo"
+      routerLink="/"
+    />
+    <div class="title">Register</div>
+    <p>
+      Please complete this form to start shopping with BuyLine® or call us at
+      1-800-333-8097.
+    </p>
+    <form class="register-form">
+      <div class="form-group">
+        <input
+          class="form-control"
+          [(ngModel)]="registerRequestBody.username"
+          type="username"
+          name="username"
+          placeholder="Username"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          [(ngModel)]="registerRequestBody.email"
+          type="email"
+          name="email"
+          placeholder="Email Address"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          [(ngModel)]="registerRequestBody.fullName"
+          type="name"
+          name="fullName"
+          placeholder="Full Name"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          [(ngModel)]="registerRequestBody.password"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="password"
+          name="password"
+          placeholder="Confirm Password"
+        />
+      </div>
+      <div class="btn-container">
+        <button class="auth-btn" (click)="register()">Register</button>
+      </div>
+    </form>
+    <div class="auth-assist">
+      <p>Already have an account? <a routerLink="/auth/login">Login here</a></p>
+    </div>
+  </div>
+</div>
