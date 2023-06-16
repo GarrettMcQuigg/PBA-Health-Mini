@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db');
+const { ensureLoggedIn } = require('../middleware/token');
 
-router.get('/all', async (req, res, next) => {
+
+router.get('/dashboard', ensureLoggedIn, (req, res, next) => {
   try {
-    const results = await db.query(`SELECT * FROM users`);
-    return res.json(results.rows);
+    const token = req.body._token;
+
+    jwt.verify(token, SECRET_KEY);
+    return res.json({ message: `Successfully signed in.` });
   } catch (err) {
     return next(err);
   }

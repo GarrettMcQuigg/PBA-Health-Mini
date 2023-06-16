@@ -4,11 +4,6 @@ const db = require('../db');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { BCRYPT_WORK_FACTOR, SECRET_KEY } = require('../config');
-const { ensureLoggedIn } = require('../middleware/token');
-
-router.get('/', (req, res, next) => {
-  res.send('fuck');
-});
 
 router.post('/register', async (req, res, next) => {
   try {
@@ -58,17 +53,6 @@ router.post('/login', async (req, res, next) => {
       }
     }
     throw new Error('User not found', 400);
-  } catch (err) {
-    return next(err);
-  }
-});
-
-router.get('/dashboard', ensureLoggedIn, (req, res, next) => {
-  try {
-    const token = req.body._token;
-
-    jwt.verify(token, SECRET_KEY);
-    return res.json({ message: `Successfully signed in.` });
   } catch (err) {
     return next(err);
   }

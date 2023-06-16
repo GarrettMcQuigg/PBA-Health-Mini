@@ -12,7 +12,7 @@ app.use(authenticateJWT);
 app.use(cors());
 
 // Routes
-app.use('/users', userRoutes);
+app.use('/', userRoutes);
 app.use('/auth', authRoutes);
 
 // Start the server

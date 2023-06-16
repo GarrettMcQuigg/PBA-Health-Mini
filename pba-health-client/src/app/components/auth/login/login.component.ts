@@ -1,15 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
+import { LoginRequestBody } from 'src/app/shared/services/auth/auth.interfaces';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  loading = false;
 
-  constructor() { }
+  loginRequestBody: LoginRequestBody = {
+    username: '',
+    password: '',
+  };
 
-  ngOnInit(): void {
+  constructor(private authService: AuthService, private router: Router) {}
+
+  login(): void {
+    if (!this.loginRequestBody.username || !this.loginRequestBody.password) {
+      throw new Error('Invalid credentials');
+    }
+    this.loading = true;
+
+    this.authService.login(this.loginRequestBody).subscribe(
+      () => {
+        this.router.navigateByUrl('/dashboard');
+      },
+      () => {
+        this.loading = false;
+      }
+    );
   }
-
 }

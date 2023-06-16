@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { RegisterRequestBody } from 'src/app/shared/services/auth/auth.interfaces';
 
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -22,8 +23,8 @@ export class RegisterComponent {
 
   constructor(
     private authService: AuthService,
-    // protected validationService: ValidationService,
     private titleService: Title,
+    private router: Router
   ) {}
 
   register(): void {
@@ -33,7 +34,7 @@ export class RegisterComponent {
 
     this.authService.register(this.registerRequestBody).subscribe(
       () => {
-        this.loading = false;
+        this.router.navigateByUrl('/dashboard');
       },
       () => {
         this.loading = false;
@@ -44,8 +45,8 @@ export class RegisterComponent {
   formIsValid(): boolean {
     // if (
     //   !this.usernameIsValid() ||
-    //   !this.fullNameIsValid() ||
     //   !this.emailIsValid() ||
+    //   !this.fullNameIsValid() ||
     //   !this.passwordIsValid() ||
     //   !this.confirmPasswordIsValid()
     // ) {
