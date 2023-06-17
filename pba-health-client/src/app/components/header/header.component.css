@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    .logo-container {
+      .pba-logo {
+        padding: 10px 0 10px 10px;
+        width: 20%;
+      }
+    }
+    .header-actions {
+      padding: 10px 10px 10px 0;
+
+      #settings-btn {
+        margin-right: 5px;
+        /* cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: #006fb9;
+        color: white;
+        padding: 8px 25px;
+        border-radius: 10px;
+        border: none; */
+      }
+
+      #logout-btn {
+        margin-left: 5px;
+        color: white;
+        background-color: #006fb9;
+        /*cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 8px 25px;
+        border-radius: 10px;
+        border: 1px solid #006fb9; */
+      }
+    }
+  }
+}
