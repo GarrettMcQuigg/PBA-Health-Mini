@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 // Components
 import { AppComponent } from './app.component';
@@ -14,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SettingsComponent } from './components/settings/settings.component';
+import { DashboardTableComponent } from './shared/dashboard-table/dashboard-table.component';
 
 @NgModule({
   imports: [
@@ -23,6 +27,9 @@ import { SettingsComponent } from './components/settings/settings.component';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatTableModule,
   ],
   declarations: [
     AppComponent,
@@ -31,6 +38,7 @@ import { SettingsComponent } from './components/settings/settings.component';
     DashboardComponent,
     HeaderComponent,
     SettingsComponent,
+    DashboardTableComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

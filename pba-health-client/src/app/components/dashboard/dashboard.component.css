@@ -1,0 +1,9 @@
+.dashboard-page {
+  .widget-container {
+    padding: 85px 5% 0;
+
+    .widget {
+      display: flex;
+    }
+  }
+}
