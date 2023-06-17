@@ -43,6 +43,16 @@ export class AuthService {
       );
   }
 
+  logout(): void {
+    localStorage.clear();
+    this.router.navigateByUrl('/auth/login');
+  }
+
+  currentUser(): User | null {
+    const userString = localStorage.getItem(this.constantService.userKey);
+    return userString ? JSON.parse(userString) : null;
+  }
+
   storeUserAndToken(user: User, token: string) {
     if (!user || !token) {
       console.error('Error registering');
