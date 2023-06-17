@@ -18,4 +18,4 @@ CREATE TABLE users
 INSERT INTO users 
     (username, email, fullName, password)
 VALUES
-    ('gbmcquigg', 'garrettmcquigg@gmail.com', 'Garrett McQuigg', 'cock')
+    ('gbmcquigg', 'garrettmcquigg@gmail.com', 'Garrett McQuigg', 'password123')
