@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ToastrModule } from 'ngx-toastr';
 
 // Components
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { DashboardTableComponent } from './shared/dashboard-table/dashboard-tabl
     MatCardModule,
     MatTableModule,
     MatTabsModule,
+    ToastrModule.forRoot(),
   ],
   declarations: [
     AppComponent,
