@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
 // Components
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { DashboardTableComponent } from './shared/dashboard-table/dashboard-tabl
     MatIconModule,
     MatCardModule,
     MatTableModule,
+    MatTabsModule,
   ],
   declarations: [
     AppComponent,

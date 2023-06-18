@@ -14,6 +14,7 @@ a {
     width: 100%;
 
     .pba-logo {
+      cursor: pointer;
       width: 99%;
       padding: 10px 0;
     }
@@ -21,6 +22,10 @@ a {
     .title {
       font-size: 30px;
       padding: 10px 0 15px;
+    }
+
+    .description {
+      padding: 3px 0 5px;
     }
 
     .form-group {

@@ -5,6 +5,10 @@ export interface AuthResponse {
   token: string;
 }
 
+export interface GetAllUsersResponse {
+  users: User[];
+}
+
 export interface RegisterRequestBody {
   username: string;
   email: string;

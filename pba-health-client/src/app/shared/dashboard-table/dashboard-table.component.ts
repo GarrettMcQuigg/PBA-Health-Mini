@@ -7,7 +7,7 @@ import { User } from '../models';
   styleUrls: ['./dashboard-table.component.css'],
 })
 export class DashboardTableComponent {
-  userDisplayedColumns: string[] = ['username', 'email', 'fullName'];
+  userDisplayedColumns: string[] = ['username', 'email', 'fullname'];
 
   @Input() users!: User[];
 
