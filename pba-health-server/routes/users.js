@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { ensureLoggedIn } = require('../middleware/token');
 const db = require('../db');
-const axios = require('axios');
 
 router.get('/dashboard', ensureLoggedIn, (req, res, next) => {
   try {
@@ -15,16 +14,15 @@ router.get('/dashboard', ensureLoggedIn, (req, res, next) => {
   }
 });
 
-router.get('/getAllUsers', (req, res, next) => {
+router.get('/getAllUsers', async (req, res, next) => {
   try {
-    const results = db.query(
+    const results = await db.query(
       `
-        SELECT * FROM users
-        RETURNING username, email, fullName
-    `,
-      [username, email, fullName]
+        SELECT username, email, fullName FROM users
+      `,
+      []
     );
-    // return results.rows; ???????????
+    return res.json(results.rows);
   } catch (err) {
     return next(err);
   }
