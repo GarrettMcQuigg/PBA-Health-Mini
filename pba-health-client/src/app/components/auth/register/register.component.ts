@@ -24,7 +24,7 @@ export class RegisterComponent {
   constructor(
     private authService: AuthService,
     private titleService: Title,
-    private router: Router
+    private router: Router,
   ) {}
 
   register(): void {
@@ -44,15 +44,17 @@ export class RegisterComponent {
 
   formIsValid(): boolean {
     // if (
-    //   !this.usernameIsValid() ||
-    //   !this.emailIsValid() ||
-    //   !this.fullNameIsValid() ||
-    //   !this.passwordIsValid() ||
-    //   !this.confirmPasswordIsValid()
+    // //   !this.usernameIsValid() ||
+    // //   !this.emailIsValid() ||
+    // //   !this.fullNameIsValid() ||
+    // //   !this.passwordIsValid() ||
+    // //   !this.confirmPasswordIsValid()
     // ) {
     //   return false;
     // }
 
     return true;
   }
+
+  
 }

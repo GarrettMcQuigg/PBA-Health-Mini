@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { User } from 'src/app/shared/models';
-import { ObservableInput, forkJoin } from 'rxjs';
-import { GetAllUsersResponse } from 'src/app/shared/services/dashboard-data/dashboard.interface';
 import { DashboardService } from 'src/app/shared/services/dashboard-data/dashboard.service';
 
 @Component({

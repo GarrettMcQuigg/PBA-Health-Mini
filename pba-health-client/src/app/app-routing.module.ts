@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
   {
@@ -25,10 +24,6 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-  },
-  {
-    path: 'settings',
-    component: SettingsComponent,
   },
   {
     path: '**',

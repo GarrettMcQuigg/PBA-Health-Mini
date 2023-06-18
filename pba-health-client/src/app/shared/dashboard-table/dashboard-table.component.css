@@ -1,0 +1,25 @@
+::ng-deep .mat-tab-label {
+  min-width: 100% !important;
+}
+
+.mat-column-username {
+  padding: 0 25px !important;
+  min-width: 150px !important;
+}
+.mat-column-email {
+  padding: 0 25px !important;
+  min-width: 150px !important;
+}
+.mat-column-fullname {
+  padding: 0 25px !important;
+  min-width: 150px !important;
+}
+
+@media (max-width: 600px) {
+  .mat-column-username,
+  .mat-column-email,
+  .mat-column-fullname {
+    padding: 0 0 0 10px !important;
+    min-width: fit-content !important;
+  }
+}
