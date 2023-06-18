@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
     userID SERIAL PRIMARY KEY,
-    username text NOT NULL,
+    username text NOT NULL UNIQUE,
     email text NOT NULL,
     fullName text NOT NULL,
     password text NOT NULL
