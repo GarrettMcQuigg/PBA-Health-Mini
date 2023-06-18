@@ -4,7 +4,6 @@ import { RegisterRequestBody } from 'src/app/shared/services/auth/auth.interface
 
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { ToastService } from 'src/app/shared/services/toast.service';
 
 @Component({
   selector: 'app-register',
@@ -25,18 +24,15 @@ export class RegisterComponent {
   constructor(
     private authService: AuthService,
     private titleService: Title,
-    private router: Router,
-    private toast: ToastService
+    private router: Router
   ) {}
 
   register(): void {
     if (!this.formIsValid()) {
       throw new Error('Invalid Entries');
     }
-
     this.authService.register(this.registerRequestBody).subscribe(
       () => {
-        this.toast.success('Verification email sent');
         this.router.navigateByUrl('/dashboard');
       },
       () => {

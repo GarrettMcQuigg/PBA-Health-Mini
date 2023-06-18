@@ -19,7 +19,7 @@
   .mat-column-username,
   .mat-column-email,
   .mat-column-fullname {
-    padding: 0 0 0 10px !important;
+    padding: 0 10px 0 !important;
     min-width: fit-content !important;
   }
 }

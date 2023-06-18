@@ -13,7 +13,6 @@ export class DashboardComponent {
   constructor(private dashboardService: DashboardService) {
     this.dashboardService.getAllUsers().subscribe((res) => {
       this.users = res;
-      console.log(this.users);
     });
   }
 }
