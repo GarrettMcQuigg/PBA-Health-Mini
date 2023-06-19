@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS usersdb;
+DROP DATABASE IF EXISTS pbausers;
 
-CREATE DATABASE usersdb;
+CREATE DATABASE pbausers;
 
-\c usersdb;
+\c pbausers;
 
 DROP TABLE IF EXISTS users;
 

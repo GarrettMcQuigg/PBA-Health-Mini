@@ -4,9 +4,9 @@ const { postgresPassword } = require('./config');
 let DB_URI;
 
 if (process.env.NODE_ENV === 'test') {
-  DB_URI = 'postgresql:///usersdb_test';
+  DB_URI = 'postgresql:///pbausers_test';
 } else {
-  DB_URI = `postgresql://gbmcquigg:${postgresPassword}@localhost:5432/usersdb`;
+  DB_URI = `postgresql://gbmcquigg:${postgresPassword}@localhost:5432/pbausers`;
 }
 
 let db = new Client({
