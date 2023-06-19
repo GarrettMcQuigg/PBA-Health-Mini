@@ -25,7 +25,9 @@ export class RegisterComponent {
     private authService: AuthService,
     private titleService: Title,
     private router: Router
-  ) {}
+  ) {
+    titleService.setTitle('Register');
+  }
 
   register(): void {
     if (!this.formIsValid()) {

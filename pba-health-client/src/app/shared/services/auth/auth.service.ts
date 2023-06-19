@@ -55,7 +55,6 @@ export class AuthService {
 
   storeUserAndToken(user: User, token: string) {
     if (!user || !token) {
-      console.error('Error registering');
       return;
     }
 

@@ -1,10 +1,13 @@
 .dashboard-page {
-  .widget-container {
-    padding: 85px 5% 0;
+  min-height: 100vh;
 
-    .widget {
-      display: flex;
-      justify-content: center;
-    }
+  .widget-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
   }
 }
